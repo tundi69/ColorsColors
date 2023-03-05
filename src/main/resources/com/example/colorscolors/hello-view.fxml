@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.colorscolors.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<GridPane fx:id="matrix" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="308.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.colorscolors.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="NEVER" minWidth="40.0" prefWidth="0.1" />
+    <ColumnConstraints hgrow="NEVER" minWidth="40.0" prefWidth="0.1" />
+      <ColumnConstraints hgrow="NEVER" minWidth="40.0" prefWidth="0.1" />
+      <ColumnConstraints hgrow="NEVER" minWidth="40.0" prefWidth="0.1" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="92.79998779296875" minWidth="40.0" prefWidth="68.0" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="136.79998779296875" minWidth="56.00001220703126" prefWidth="80.80000000000001" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" prefHeight="26.0" prefWidth="74.0" text="Start" GridPane.columnIndex="5" />
+      <Button fx:id="green" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: green;" text="Green" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+      <Button fx:id="cyan" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: cyan;" text="Cyan" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+      <Button fx:id="pink" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: pink;" text="Pink" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+      <Button fx:id="grey" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: grey;" text="Grey" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+      <Circle radius="17.0" stroke="WHITE" strokeType="INSIDE" />
+      <Circle radius="17.0" stroke="WHITE" strokeType="INSIDE" GridPane.columnIndex="1" />
+      <Circle radius="17.0" stroke="WHITE" strokeType="INSIDE" GridPane.columnIndex="2" />
+      <Circle radius="17.0" stroke="WHITE" strokeType="INSIDE" GridPane.columnIndex="3" />
+      <Button fx:id="magenta" mnemonicParsing="false" onAction="#getInput" style="-fx-background-color: magenta;" text="Magenta" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Button fx:id="white" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: white;" text="White" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Button fx:id="yellow" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: yellow;" text="Yellow" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Button fx:id="red" mnemonicParsing="false" onAction="#getInput" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: red;" text="Red" visible="false" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Label fx:id="eighth" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+      <Label fx:id="ninth" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+      <Label fx:id="tenth" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+      <Label fx:id="seventh" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+      <Label fx:id="sixth" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Label fx:id="fifth" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Label fx:id="fourth" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Label fx:id="third" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Label fx:id="second" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Label fx:id="first" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</GridPane>
