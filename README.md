@@ -6,3 +6,5 @@ according to whether it is in the wrong place or in the right place compared to 
 Colors can be repeated.
 
 Have a nice game without advertisements... :smile: !
+
+Developed in IntelliJ, using Java, and JavaFx for GUI. 
