@@ -22,3 +22,4 @@ Colors may be repeated, which adds an extra layer of challenge and requires logi
 This project was originally developed as a student project and focuses on algorithmic problem-solving and user interaction.
 
 Enjoy the game – completely ad-free 😄
+<img width="372" height="716" alt="image" src="https://github.com/user-attachments/assets/31cb76a2-4abd-4495-8adf-afafb182397b" />
